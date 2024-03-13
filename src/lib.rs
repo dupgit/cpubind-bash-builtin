@@ -20,7 +20,7 @@ impl Builtin for CpuBind {
         let mut slurm_str: String = "".to_string();
         let job_id = find_as_string("SLURM_JOB_ID");
         if let Some(job_id_str) = job_id.as_ref().and_then(|v| v.to_str().ok()) {
-            slurm_str = format!("{job_id_str}")
+            slurm_str = job_id_str.to_string()
         }
 
         let mpi_rank = find_as_string("SLURM_PROCID");
@@ -41,7 +41,7 @@ impl Builtin for CpuBind {
         for core in core_ids.into_iter() {
             write!(&mut output, " {}", core.id)?
         }
-        writeln!(&mut output, "")?;
+        writeln!(&mut output)?;
 
         Ok(())
     }
