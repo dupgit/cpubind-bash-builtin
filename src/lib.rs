@@ -8,6 +8,17 @@ builtin_metadata!(name = "cpubind", create = CpuBind::default);
 #[derive(Default)]
 struct CpuBind;
 
+/// Gets the variable named var if it exists and return its value
+/// or an empty string if it does not exists.
+fn get_variable_string(var: &str) -> String {
+    let var_ostring = find_as_string(var);
+    if let Some(var_str) = var_ostring.as_ref().and_then(|v| v.to_str().ok()) {
+        var_str.to_string()
+    } else {
+        "".to_string()
+    }
+}
+
 impl Builtin for CpuBind {
     fn call(&mut self, _args: &mut Args) -> Result<()> {
         let stdout_handle = io::stdout();
@@ -17,20 +28,11 @@ impl Builtin for CpuBind {
             None => Vec::new(),
         };
 
-        let mut slurm_str: String = "".to_string();
-        let job_id = find_as_string("SLURM_JOB_ID");
-        if let Some(job_id_str) = job_id.as_ref().and_then(|v| v.to_str().ok()) {
-            slurm_str = job_id_str.to_string()
-        }
+        let slurm_job_id = get_variable_string("SLURM_JOB_ID");
+        let slurm_procid = get_variable_string("SLURM_PROCID");
+        let slurm_localid = get_variable_string("SLURM_LOCALID");
 
-        let mpi_rank = find_as_string("SLURM_PROCID");
-        if let Some(mpi_rank_str) = mpi_rank.as_ref().and_then(|v| v.to_str().ok()) {
-            slurm_str = format!("{slurm_str} - {mpi_rank_str}")
-        }
-        let local_id = find_as_string("SLURM_LOCALID");
-        if let Some(local_id_str) = local_id.as_ref().and_then(|v| v.to_str().ok()) {
-            slurm_str = format!("{slurm_str} - {local_id_str}")
-        }
+        let slurm_str = format!("{slurm_job_id} - {slurm_procid} - {slurm_localid}");
 
         let hostname = match hostname::get()?.into_string() {
             Ok(string) => string,
