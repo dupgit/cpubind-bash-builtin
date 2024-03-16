@@ -1,9 +1,28 @@
 use bash_builtins::variables::find_as_string;
-use bash_builtins::{builtin_metadata, Args, Builtin, Result};
+use bash_builtins::{builtin_metadata, Args, Builtin, BuiltinOptions, Result};
 use core_affinity::get_core_ids;
 use std::io::{self, BufWriter, Write};
 
-builtin_metadata!(name = "cpubind", create = CpuBind::default);
+builtin_metadata!(
+    name = "cpubind",
+    create = CpuBind::default,
+    short_doc = "cpubind [-i identifier]",
+    // Non-breaking white character here is intentional to keep
+    // some spaces before it to avoid a bug in bash-builtins that
+    // prints other lines from bash's memory instead.
+    long_doc = "
+    Prints information about the task and it's cpu affinity
+     
+    Options:
+        -i identifier used to identify that particular task
+    ",
+);
+
+#[derive(BuiltinOptions)]
+enum Opt {
+    #[opt = 'i']
+    Identifier(String),
+}
 
 #[derive(Default)]
 struct CpuBind;
@@ -20,9 +39,21 @@ fn get_variable_string(var: &str) -> String {
 }
 
 impl Builtin for CpuBind {
-    fn call(&mut self, _args: &mut Args) -> Result<()> {
-        let stdout_handle = io::stdout();
-        let mut output = BufWriter::new(stdout_handle.lock());
+    fn call(&mut self, args: &mut Args) -> Result<()> {
+        let mut identifier: String = "".to_string();
+
+        // managing options argument if any - none is ok
+        if !args.is_empty() {
+            for opt in args.options() {
+                match opt? {
+                    Opt::Identifier(s) => identifier = s,
+                };
+            }
+        }
+
+        // It is an error if we receive free arguments.
+        args.finished()?;
+
         let core_ids = match get_core_ids() {
             Some(core_ids) => core_ids,
             None => Vec::new(),
@@ -32,12 +63,17 @@ impl Builtin for CpuBind {
         let slurm_procid = get_variable_string("SLURM_PROCID");
         let slurm_localid = get_variable_string("SLURM_LOCALID");
 
-        let slurm_str = format!("{slurm_job_id} - {slurm_procid} - {slurm_localid}");
+        let slurm_str = format!("{identifier} - {slurm_job_id} - {slurm_procid} - {slurm_localid}");
 
         let hostname = match hostname::get()?.into_string() {
             Ok(string) => string,
             Err(_) => "".to_string(),
         };
+
+        // using write!() and writeln!() instead of println!() to avoid
+        // panicking if stdout is closed.
+        let stdout_handle = io::stdout();
+        let mut output = BufWriter::new(stdout_handle.lock());
 
         write!(&mut output, "{hostname} - {slurm_str} - cpu affinity:")?;
         for core in core_ids.into_iter() {
