@@ -14,9 +14,9 @@ dependencies = [
 
 [[package]]
 name = "bash_builtins_macro"
-version = "0.1.1"
+version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ef54a1cdd9dab7b114132f701ff08f7d86a9981f1cf895d93ea8759a3e4f677c"
+checksum = "52657a5e014b9ecf09c39754247045f525677ffab018a0e5130aa8450f3a227a"
 dependencies = [
  "proc-macro2",
  "quote",

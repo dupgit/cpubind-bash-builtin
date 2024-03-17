@@ -12,7 +12,7 @@ builtin_metadata!(
     // prints other lines from bash's memory instead.
     long_doc = "
     Prints information about the task and it's cpu affinity
-     
+
     Options:
         -i identifier used to identify that particular task
     ",
