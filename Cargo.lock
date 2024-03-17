@@ -4,9 +4,9 @@ version = 3
 
 [[package]]
 name = "bash-builtins"
-version = "0.3.1"
+version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bb2be2ce82a30dc1b61402eef34b1595c915bb30131b5393e0b5ffe9f4e780bd"
+checksum = "5f61a997d88066748cec45b82d16ccde41cafa3fd9ed82c669510dee03325c1d"
 dependencies = [
  "bash_builtins_macro",
  "libc",
