@@ -1,6 +1,6 @@
 This is a bash builtin thanks to [bash-builtins crate](https://docs.rs/bash-builtins/latest/bash_builtins/).
 
-It provides some informations about the cpu affinity and the hostname,
+It provides some information about the cpu affinity and the hostname,
 SLURM_JOB_ID, SLURM_PROCID and SLURM_LOCALID if they exists. Optionally
 you can provide an identifier that will be printed with all the other
 information using `-i` option.
