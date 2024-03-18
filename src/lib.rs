@@ -7,9 +7,6 @@ builtin_metadata!(
     name = "cpubind",
     create = CpuBind::default,
     short_doc = "cpubind [-i identifier]",
-    // Non-breaking white character here is intentional to keep
-    // some spaces before it to avoid a bug in bash-builtins that
-    // prints other lines from bash's memory instead.
     long_doc = "
     Prints information about the task and it's cpu affinity
 
