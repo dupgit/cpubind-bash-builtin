@@ -17,5 +17,6 @@ myhostname -  -  -  -  - cpu affinity: 0 1 2 3 4 5 6 7 8 9 10 11
 $ cpubind -i "id 1 🙂"
 myhostname - id 1 🙂 -  -  -  - cpu affinity: 0 1 2 3 4 5 6 7 8 9 10 11
 $ enable -d cpubind
+$ cpubind
 -bash: cpubind: command not found
 ```
