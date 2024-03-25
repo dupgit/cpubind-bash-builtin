@@ -1,3 +1,4 @@
+#![doc = include_str!("../README.md")]
 use bash_builtins::variables::find_as_string;
 use bash_builtins::{builtin_metadata, Args, Builtin, BuiltinOptions, Result};
 use core_affinity::get_core_ids;
