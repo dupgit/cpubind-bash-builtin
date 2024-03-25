@@ -2,6 +2,13 @@
 name = "cpubind-bash-builtin"
 version = "0.1.0"
 edition = "2021"
+authors = ["Olivier Delhomme <olivier.delhomme@free.fr>"]
+description = "Bash builtin providing information about cpu affinity and some environment variables"
+repository = "https://github.com/dupgit/cpubind-bash-builtin"
+license = "MIT OR Apache-2.0"
+keywords = ["command line", "bash", "cpu"]
+categories = ["command-line-utilities"]
+
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
