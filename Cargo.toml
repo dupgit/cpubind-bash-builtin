@@ -6,7 +6,7 @@ authors = ["Olivier Delhomme <olivier.delhomme@free.fr>"]
 description = "Bash builtin providing information about cpu affinity and some environment variables"
 repository = "https://github.com/dupgit/cpubind-bash-builtin"
 license = "MIT OR Apache-2.0"
-keywords = ["command line", "bash", "cpu"]
+keywords = ["command-line", "bash", "cpu", "bash-builtin"]
 categories = ["command-line-utilities"]
 
 
