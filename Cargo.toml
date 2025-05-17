@@ -1,6 +1,6 @@
 [package]
 name = "cpubind-bash-builtin"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Olivier Delhomme <olivier.delhomme@free.fr>"]
 description = "Bash builtin providing information about cpu affinity and some environment variables"

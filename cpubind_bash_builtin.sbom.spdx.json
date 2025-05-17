@@ -1,0 +1,401 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "creationInfo": {
+    "created": "2025-05-17T09:34:56.868Z",
+    "creators": [
+      "Tool: cargo-sbom-v0.9.1"
+    ]
+  },
+  "dataLicense": "CC0-1.0",
+  "documentNamespace": "https://spdx.org/spdxdocs/cpubind-bash-builtin-9260e31d-ec76-453c-b5e5-5cf7739ac90f",
+  "files": [],
+  "name": "cpubind-bash-builtin",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Package-bash-builtins-0.4.1",
+      "description": "This crate provides utilities to implement loadable builtins for bash.",
+      "downloadLocation": "registry+https://github.com/rust-lang/crates.io-index",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:cargo/bash-builtins@0.4.1",
+          "referenceType": "purl"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "name": "bash-builtins",
+      "versionInfo": "0.4.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-bash_builtins_macro-0.2.0",
+      "description": "Macros for the bash-builtins crate",
+      "downloadLocation": "registry+https://github.com/rust-lang/crates.io-index",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:cargo/bash_builtins_macro@0.2.0",
+          "referenceType": "purl"
+        }
+      ],
+      "licenseConcluded": "Apache-2.0",
+      "licenseDeclared": "Apache-2.0",
+      "name": "bash_builtins_macro",
+      "versionInfo": "0.2.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-cfg-if-1.0.0",
+      "description": "A macro to ergonomically define an item depending on a large number of #[cfg]\nparameters. Structured like an if-else chain, the first matching branch is the\nitem that gets emitted.\n",
+      "downloadLocation": "registry+https://github.com/rust-lang/crates.io-index",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:cargo/cfg-if@1.0.0",
+          "referenceType": "purl"
+        }
+      ],
+      "homepage": "https://github.com/alexcrichton/cfg-if",
+      "licenseConcluded": "MIT OR Apache-2.0",
+      "licenseDeclared": "MIT/Apache-2.0",
+      "name": "cfg-if",
+      "versionInfo": "1.0.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-core_affinity-0.8.3",
+      "description": "Manages CPU affinities",
+      "downloadLocation": "registry+https://github.com/rust-lang/crates.io-index",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:cargo/core_affinity@0.8.3",
+          "referenceType": "purl"
+        }
+      ],
+      "homepage": "https://github.com/Elzair/core_affinity_rs",
+      "licenseConcluded": "MIT OR Apache-2.0",
+      "licenseDeclared": "MIT/Apache-2.0",
+      "name": "core_affinity",
+      "versionInfo": "0.8.3"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-cpubind-bash-builtin-0.1.1",
+      "description": "Bash builtin providing information about cpu affinity and some environment variables",
+      "downloadLocation": "NONE",
+      "licenseConcluded": "MIT OR Apache-2.0",
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "name": "cpubind-bash-builtin",
+      "versionInfo": "0.1.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-hermit-abi-0.3.9",
+      "description": "Hermit system calls definitions.",
+      "downloadLocation": "registry+https://github.com/rust-lang/crates.io-index",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:cargo/hermit-abi@0.3.9",
+          "referenceType": "purl"
+        }
+      ],
+      "licenseConcluded": "MIT OR Apache-2.0",
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "name": "hermit-abi",
+      "versionInfo": "0.3.9"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-hostname-0.4.1",
+      "description": "Cross-platform system's host name functions",
+      "downloadLocation": "registry+https://github.com/rust-lang/crates.io-index",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:cargo/hostname@0.4.1",
+          "referenceType": "purl"
+        }
+      ],
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "MIT",
+      "name": "hostname",
+      "versionInfo": "0.4.1"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-libc-0.2.172",
+      "description": "Raw FFI bindings to platform libraries like libc.\n",
+      "downloadLocation": "registry+https://github.com/rust-lang/crates.io-index",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:cargo/libc@0.2.172",
+          "referenceType": "purl"
+        }
+      ],
+      "homepage": "https://github.com/rust-lang/libc",
+      "licenseConcluded": "MIT OR Apache-2.0",
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "name": "libc",
+      "versionInfo": "0.2.172"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-num_cpus-1.16.0",
+      "description": "Get the number of CPUs on a machine.",
+      "downloadLocation": "registry+https://github.com/rust-lang/crates.io-index",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:cargo/num_cpus@1.16.0",
+          "referenceType": "purl"
+        }
+      ],
+      "licenseConcluded": "MIT OR Apache-2.0",
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "name": "num_cpus",
+      "versionInfo": "1.16.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-proc-macro2-1.0.95",
+      "description": "A substitute implementation of the compiler's `proc_macro` API to decouple token-based libraries from the procedural macro use case.",
+      "downloadLocation": "registry+https://github.com/rust-lang/crates.io-index",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:cargo/proc-macro2@1.0.95",
+          "referenceType": "purl"
+        }
+      ],
+      "licenseConcluded": "MIT OR Apache-2.0",
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "name": "proc-macro2",
+      "versionInfo": "1.0.95"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-quote-1.0.40",
+      "description": "Quasi-quoting macro quote!(...)",
+      "downloadLocation": "registry+https://github.com/rust-lang/crates.io-index",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:cargo/quote@1.0.40",
+          "referenceType": "purl"
+        }
+      ],
+      "licenseConcluded": "MIT OR Apache-2.0",
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "name": "quote",
+      "versionInfo": "1.0.40"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-syn-1.0.109",
+      "description": "Parser for Rust source code",
+      "downloadLocation": "registry+https://github.com/rust-lang/crates.io-index",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:cargo/syn@1.0.109",
+          "referenceType": "purl"
+        }
+      ],
+      "licenseConcluded": "MIT OR Apache-2.0",
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "name": "syn",
+      "versionInfo": "1.0.109"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-unicode-ident-1.0.18",
+      "description": "Determine whether characters have the XID_Start or XID_Continue properties according to Unicode Standard Annex #31",
+      "downloadLocation": "registry+https://github.com/rust-lang/crates.io-index",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:cargo/unicode-ident@1.0.18",
+          "referenceType": "purl"
+        }
+      ],
+      "licenseConcluded": "(MIT OR Apache-2.0) AND Unicode-3.0",
+      "licenseDeclared": "(MIT OR Apache-2.0) AND Unicode-3.0",
+      "name": "unicode-ident",
+      "versionInfo": "1.0.18"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-winapi-0.3.9",
+      "description": "Raw FFI bindings for all of Windows API.",
+      "downloadLocation": "registry+https://github.com/rust-lang/crates.io-index",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:cargo/winapi@0.3.9",
+          "referenceType": "purl"
+        }
+      ],
+      "licenseConcluded": "MIT OR Apache-2.0",
+      "licenseDeclared": "MIT/Apache-2.0",
+      "name": "winapi",
+      "versionInfo": "0.3.9"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-winapi-i686-pc-windows-gnu-0.4.0",
+      "description": "Import libraries for the i686-pc-windows-gnu target. Please don't use this crate directly, depend on winapi instead.",
+      "downloadLocation": "registry+https://github.com/rust-lang/crates.io-index",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:cargo/winapi-i686-pc-windows-gnu@0.4.0",
+          "referenceType": "purl"
+        }
+      ],
+      "licenseConcluded": "MIT OR Apache-2.0",
+      "licenseDeclared": "MIT/Apache-2.0",
+      "name": "winapi-i686-pc-windows-gnu",
+      "versionInfo": "0.4.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-winapi-x86_64-pc-windows-gnu-0.4.0",
+      "description": "Import libraries for the x86_64-pc-windows-gnu target. Please don't use this crate directly, depend on winapi instead.",
+      "downloadLocation": "registry+https://github.com/rust-lang/crates.io-index",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:cargo/winapi-x86_64-pc-windows-gnu@0.4.0",
+          "referenceType": "purl"
+        }
+      ],
+      "licenseConcluded": "MIT OR Apache-2.0",
+      "licenseDeclared": "MIT/Apache-2.0",
+      "name": "winapi-x86_64-pc-windows-gnu",
+      "versionInfo": "0.4.0"
+    },
+    {
+      "SPDXID": "SPDXRef-Package-windows-link-0.1.1",
+      "description": "Linking for Windows",
+      "downloadLocation": "registry+https://github.com/rust-lang/crates.io-index",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:cargo/windows-link@0.1.1",
+          "referenceType": "purl"
+        }
+      ],
+      "licenseConcluded": "MIT OR Apache-2.0",
+      "licenseDeclared": "MIT OR Apache-2.0",
+      "name": "windows-link",
+      "versionInfo": "0.1.1"
+    }
+  ],
+  "relationships": [
+    {
+      "relatedSpdxElement": "SPDXRef-Package-bash_builtins_macro-0.2.0",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-bash-builtins-0.4.1"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-libc-0.2.172",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-bash-builtins-0.4.1"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-proc-macro2-1.0.95",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-bash_builtins_macro-0.2.0"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-quote-1.0.40",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-bash_builtins_macro-0.2.0"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-syn-1.0.109",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-bash_builtins_macro-0.2.0"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-libc-0.2.172",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-core_affinity-0.8.3"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-num_cpus-1.16.0",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-core_affinity-0.8.3"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-winapi-0.3.9",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-core_affinity-0.8.3"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-bash-builtins-0.4.1",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-cpubind-bash-builtin-0.1.1"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-core_affinity-0.8.3",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-cpubind-bash-builtin-0.1.1"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-hostname-0.4.1",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-cpubind-bash-builtin-0.1.1"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-cfg-if-1.0.0",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-hostname-0.4.1"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-libc-0.2.172",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-hostname-0.4.1"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-windows-link-0.1.1",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-hostname-0.4.1"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-hermit-abi-0.3.9",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-num_cpus-1.16.0"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-libc-0.2.172",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-num_cpus-1.16.0"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-unicode-ident-1.0.18",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-proc-macro2-1.0.95"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-proc-macro2-1.0.95",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-quote-1.0.40"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-proc-macro2-1.0.95",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-syn-1.0.109"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-quote-1.0.40",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-syn-1.0.109"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-unicode-ident-1.0.18",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-syn-1.0.109"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-winapi-i686-pc-windows-gnu-0.4.0",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-winapi-0.3.9"
+    },
+    {
+      "relatedSpdxElement": "SPDXRef-Package-winapi-x86_64-pc-windows-gnu-0.4.0",
+      "relationshipType": "DEPENDS_ON",
+      "spdxElementId": "SPDXRef-Package-winapi-0.3.9"
+    }
+  ],
+  "spdxVersion": "SPDX-2.3"
+}
